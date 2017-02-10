@@ -26,5 +26,4 @@ public class BookstoreApplication {
 			repository.save(new Book("Animal Farm","George Orwell",1945,"2212343-5",9.99));
 		};
 	}
-	
 }
