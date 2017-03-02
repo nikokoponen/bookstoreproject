@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import fi.niko.bookstore.domain.SignupForm;
 import fi.niko.bookstore.domain.User;
@@ -20,6 +21,11 @@ import fi.niko.bookstore.domain.UserRepository;
 public class UserController {
 	@Autowired
 	private UserRepository repository;
+	
+	@RequestMapping("/u")
+    public @ResponseBody String greeting() {
+        return "Hello From UserController.";
+    }
 	
 	@RequestMapping(value = "/signup")
     public String addUser(Model model){

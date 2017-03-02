@@ -64,4 +64,9 @@ public class BookController {
 		repository.delete(bookId);
 		return "redirect:../booklist";
 	}
+	
+	@RequestMapping("/b")
+    public @ResponseBody String greeting() {
+        return "Hello From BookController.";
+    }
 }
